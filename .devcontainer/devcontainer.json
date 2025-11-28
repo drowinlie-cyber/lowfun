@@ -1,0 +1,13 @@
+{
+    "image": "mcr.microsoft.com/devcontainers/python:3.9",
+    "forwardPorts": [5000],
+    "portsAttributes": {
+        "5000": {
+            "label": "LowFun Forum",
+            "onAutoForward": "openPreview",
+            "protocol": "https"
+        }
+    },
+    "postCreateCommand": "pip install http-server",
+    "postStartCommand": "nohup python lowfun.py > forum.log 2>&1 &"
+}
